@@ -1,3 +1,7 @@
+ 
+
+
+
 let display = [];
 let display2 = [];
 let op = 0;
@@ -78,6 +82,17 @@ btndiv.addEventListener('click',() => {
     op = "/";
     document.getElementById("display").innerHTML = display.join("") + op;
     console.log(op);
+});
+
+zero.addEventListener('click',() => {  
+    if(op != 0) {
+        display2.push(0);
+        document.getElementById("display").innerHTML = display.join("") + op + display2.join("");
+    } else {
+        display.push(0);
+        document.getElementById("display").innerHTML = display.join("");
+        console.log(display.join(""));
+    }
 });
 
 btn1.addEventListener('click',() => {  
